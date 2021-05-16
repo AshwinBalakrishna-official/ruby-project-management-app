@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Staffs</h1>
+
+<table class="table ">
+  <thead>
+    <tr>
+      <th>Employee id</th>
+      <th>First name</th>
+      <th>Project assigned</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @staffs.each do |staff| %>
+      <tr>
+        <td><%= staff.employee_id %></td>
+        <td><%= staff.first_name %></td>
+   
+        <td><%= staff.project_assigned %></td>
+        <td><%= link_to 'Detials', staff,class:"btn btn-success" %></td>
+        <td><%= link_to 'Update', edit_staff_path(staff),class:"btn btn-warning" %></td>
+        <td><%= link_to 'Remove', staff, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Staff', new_staff_path,class:"btn btn-primary" %>
