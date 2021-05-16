@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="card" style="width: 30rem;">
+  <div class="card-header">
+    <%= @project.project_name %>
+  </div>
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item"><p>
+        <strong>Client name:</strong>
+        <%= @project.client_name %>
+        </p>
+      </li>
+    <li class="list-group-item"><p>
+        <strong>Start date:</strong>
+        <%= @project.start_date %>
+      </p>
+    </li>
+    <li class="list-group-item"><p>
+        <strong>End date:</strong>
+        <%= @project.end_date %>
+          </p>
+    </li>
+    <li class="list-group-item"><p>
+        <strong>Client phone number:</strong>
+        <%= @project.client_phone_number %>
+        </p>
+    </li>
+    <li class="list-group-item"><p>
+      <strong>Client email:</strong>
+      <%= @project.client_email %>
+     </p>
+    </li>
+  </ul>
+</div>
+
+<br>
+
+
+
+
+
+
+<%= link_to 'Edit', edit_project_path(@project),class:"btn btn-primary" %> |
+<%= link_to 'Back', projects_path,class:"btn btn-dark" %>
